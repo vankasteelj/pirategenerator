@@ -1,5 +1,5 @@
 
-const names = ['Barnabie', 'Rosie', 'Raffertie', 'Amie', 'Timothie', 'Marcy', 'Zacharie', 'Elsie', 'Billie', 'Lainie', 'Connolly', 'Callie', 'Montie', 'Cassie', 'Archibaldie', 'Emmie', 'Barnie', 'Sadie', 'Mackenzie', 'Goldie', 'Charlottie', 'Robbie', 'Evie', 'Montgomie', 'Stephanie', 'Maxie', 'Hallie', 'Alfie', 'Maisie', 'Ronie', 'Dixie', 'Bernie', 'Trixie', 'Frankie', 'Cassie', 'Bennie', 'Mindie', 'Bobbie', 'Kimmie', 'Fredddie', 'Pippie', 'Georgie', 'Mollie', 'Harvie', 'Lexie', 'Louie', 'Sallie', 'Edddie', 'Hattie', 'Bennie', 'Oliverie', 'Maisy', 'Percie', 'Lottie', 'Reggie', 'Sophie', 'Zachary', 'Cassy', 'Harry', 'Amelie', 'Benny', 'Mary', 'Finley', 'Kimberly', 'Archie', 'Rosalie', 'Tommie', 'Lucy', 'Charlie', 'Cally', 'Gabbie', 'Belly', 'Ashby', 'Emily', 'Rusty', 'Carrie', 'Frankie', 'Maggie', 'Leslie', 'Rudy', 'Sydney', 'Lacie', 'Cody', 'Elizabethie', 'Jeffrie', 'Allie', 'Wesley', 'Kimberley', 'Ty', 'Evie', 'Macky', 'Wendy', 'Eddy', 'Haylie', 'Samsie', 'Ellie', 'Toby', 'Amy', 'Charlie', 'Nancy']
+const names = ['Barnabie', 'Rosie', 'Raffertie', 'Amie', 'Timothie', 'Marcy', 'Zacharie', 'Elsie', 'Billie', 'Lainie', 'Connolly', 'Callie', 'Montie', 'Cassie', 'Archibaldie', 'Emmie', 'Barnie', 'Sadie', 'Mackenzie', 'Goldie', 'Charlottie', 'Robbie', 'Evie', 'Montgomie', 'Stephanie', 'Maxie', 'Hallie', 'Alfie', 'Maisie', 'Ronie', 'Dixie', 'Bernie', 'Trixie', 'Frankie', 'Cassie', 'Bennie', 'Mindie', 'Bobbie', 'Kimmie', 'Freddie', 'Pippie', 'Georgie', 'Mollie', 'Harvie', 'Lexie', 'Louie', 'Sallie', 'Eddie', 'Hattie', 'Bennie', 'Oliverie', 'Maisy', 'Percie', 'Lottie', 'Reggie', 'Sophie', 'Zachary', 'Cassy', 'Harry', 'Amelie', 'Benny', 'Mary', 'Finley', 'Kimberly', 'Archie', 'Rosalie', 'Tommie', 'Lucy', 'Charlie', 'Cally', 'Gabbie', 'Belly', 'Ashby', 'Emily', 'Rusty', 'Carrie', 'Frankie', 'Maggie', 'Leslie', 'Rudy', 'Sydney', 'Lacie', 'Cody', 'Elizabethie', 'Jeffrie', 'Allie', 'Wesley', 'Kimberley', 'Ty', 'Evie', 'Macky', 'Wendy', 'Eddy', 'Haylie', 'Samsie', 'Ellie', 'Toby', 'Amy', 'Charlie', 'Nancy']
 const nicknames = [
   'Blackbeard',
   'Redbeard',
@@ -83,18 +83,18 @@ const stories = [
 ]
 
 const professions = [
-  'sailor',
-  'bosco',
-  'artist',
-  'quartermaster',
-  'carpenter',
-  'healer',
-  'chaplain',
-  'lookout',
-  'cultist',
-  'mage',
-  'seeker',
-  'warrior',
+  'Sailor',
+  'Bosco',
+  'Artist',
+  'Quartermaster',
+  'Carpenter',
+  'Healer',
+  'Chaplain',
+  'Lookout',
+  'Cultist',
+  'Mage',
+  'Seeker',
+  'Warrior',
 ]
 
 const getRandomItem = (arr) => {
