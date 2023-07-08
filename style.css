@@ -54,10 +54,18 @@ body {
   font-size: 1em;
 }
 
-#life #story {
-  padding-top: 20px;
+#life #story,
+#life #appearance {
   font-style: italic;
   font-size: 1.2em;
+}
+
+#life #story {
+  padding-top: 20px;
+  padding-bottom: 5px;
+}
+
+#life #appearance {
   padding-bottom: 20px;
 }
 

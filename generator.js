@@ -214,6 +214,29 @@ const weapons = [
   'Cursed cutlass',
 ]
 
+const appearances = [
+  "Their weather-beaten face bears the tales of a hundred sunsets and a thousand shenanigans.",
+  "They sport a magnificent ponytail that rivals the size of their treasure chest.",
+  "With an unmistakable swagger, they walk the deck, donning a hat that can double as a makeshift umbrella.",
+  "Their mismatched boots and tattered coat give them a charmingly disheveled look, as if they just narrowly escaped a fashion disaster.",
+  "Their eyes sparkle like two doubloons, and their smile can brighten the darkest corners of a pirate tavern.",
+  "Their outfit is a hodgepodge of stolen fashion trends from across the seven seas, proving that style truly knows no boundaries.",
+  "They wear a bandana embroidered with the phrase 'Caution: Pirate at Work' just to keep everyone on their toes.",
+  "Their trusty parrot companion sits atop their shoulder, adding a splash of feathers to their unique pirate ensemble.",
+  "Their fashion sense is best described as 'rummage chic' with a touch of 'sea breeze couture.'",
+  "They proudly display a collection of seashells tied to their belt, claiming it's the latest pirate fashion accessory.",
+  "Their pirate hat has so many feathers that it's considered a migratory bird sanctuary.",
+  "They sport a pirate coat covered in pockets, which they claim are for storing their snacks and a secret stash of pirate-themed puns.",
+  "Their boots are always polished to perfection, ensuring they can make a stylish getaway even in the muddiest of situations.",
+  "They have a collection of colorful scarves that would make even the most fashionable pirate envious.",
+  "Their sword belt is adorned with an assortment of shiny trinkets, each with a story that gets longer with every telling.",
+  "They wear a peg leg with a built-in compass, ensuring they never lose their sense of direction or their flair for fashion.",
+  "Their eyepatch is uniquely designed to resemble a pirate's favorite snack: a delicious slice of pizza.",
+  "They have an impressive array of tattoos, each telling a different tale, with one that mysteriously changes design every full moon.",
+  "Their attire is adorned with buttons salvaged from various adventures, with each button representing a daring escape or a questionable decision.",
+  "They wear a shiny belt buckle engraved with the words 'No booty like pirate booty.'",
+]
+
 const getRandomItem = (arr) => {
   const randomIndex = Math.floor(Math.random() * arr.length)
   const item = arr[randomIndex]
@@ -227,10 +250,12 @@ const generate = () => {
   let weapon = getRandomItem(weapons)
   let story = getRandomItem(stories)
   let reputation = getRandomItem(reputations)
+  let appearance = getRandomItem(appearances)
   document.getElementById('name').innerText = name + ' "' + nickname + '"'
   document.getElementById('profession').innerText = 'Profession: ' + profession
-  document.getElementById('story').innerText = story + ' ' + reputation
   document.getElementById('weapon').innerText = 'Weapon of choice: ' + weapon
+  document.getElementById('story').innerText = story + ' ' + reputation
+  document.getElementById('appearance').innerText = appearance
 
   let ageMax = 73;
   let ageMin = 17;
