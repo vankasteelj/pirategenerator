@@ -86,7 +86,7 @@ body {
 
 @media (max-width: 768px) {
   #header h1 {
-    font-size: 24px;
+    font-size: 22px;
   }
   #charactersheet {
     width: 90vw;
@@ -96,7 +96,7 @@ body {
 
 @media (min-width: 769px) and (max-width: 1024px) {
   #header h1 {
-    font-size: 32px;
+    font-size: 30px;
   }
   #charactersheet {
     width: 70vw;
@@ -106,7 +106,7 @@ body {
 
 @media (min-width: 1025px) {
   #header h1 {
-    font-size: 48px;
+    font-size: 46px;
   }
   #charactersheet {
     width: 50vw;
