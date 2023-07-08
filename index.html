@@ -7,14 +7,22 @@
   <body>
     <section id="header">
       <h1>The Pirate Generator</h1>
+      <button id="generate" onclick="generate()">Generate</button>
     </section>
 
     <section id="charactersheet">
-
+      <div id="identity">
+        <p id="name"></p>
+        <p id="age"></p>
+        <p id="profession"></p>
+      </div>
+      <div id="life">
+        <p id="story"></p>
+      </div>
     </section>
 
-    <section id="interactions">
-      <button id="generate" onclick="generate()">Generate</button>
+    <section id="credits">
+      <p>Made with &hearts; by <a href="https://github.com/vankasteelj">vankasteelj</a></p>
     </section>
 
     <script type="text/javascript" src="./generator.js"></script>

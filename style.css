@@ -1,0 +1,73 @@
+* { margin: 0; }
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#header {
+  width: 100vw;
+  height: 60px;
+  background-color: #222;
+  color: #efefef;
+  margin-top: 0 !important;
+  margin-bottom: 5px;
+}
+
+#header h1 {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 3em;
+  padding-left: 30px;
+}
+
+#header #generate {
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  height: 30px;
+  border-radius: 5px;
+  border-color: #efefef;
+  border-style: 1px solid;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+#charactersheet {
+  padding-top: 20px;
+  width: 50vw;
+  margin-left: 25vw;
+}
+
+#identity #name {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+#identity #age,
+#identity #profession {
+  float: left;
+  font-size: 1.2em;
+  padding-right: 30px;
+}
+
+#life #story {
+  clear: both;
+  padding-top: 20px;
+  font-style: italic;
+  font-size: 1.4em;
+}
+
+#credits {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  padding: 5px;
+  font-size: .8em;
+  color: #666;
+}
+
+#credits a {
+  color: inherit;
+  font-style: italic;
+  text-decoration: none;
+}
