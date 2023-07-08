@@ -1,5 +1,5 @@
 
-const names = ['Barnabie', 'Rosie', 'Raffertie', 'Amie', 'Timothie', 'Marcy', 'Zacharie', 'Elsie', 'Billie', 'Lainie', 'Connolly', 'Callie', 'Montie', 'Cassie', 'Archibaldie', 'Emmie', 'Barnie', 'Sadie', 'Mackenzie', 'Goldie', 'Charlottie', 'Robbie', 'Evie', 'Montgomie', 'Stephanie', 'Maxie', 'Hallie', 'Alfie', 'Maisie', 'Ronie', 'Dixie', 'Bernie', 'Trixie', 'Frankie', 'Cassie', 'Bennie', 'Mindie', 'Bobbie', 'Kimmie', 'Freddie', 'Pippie', 'Georgie', 'Mollie', 'Harvie', 'Lexie', 'Louie', 'Sallie', 'Eddie', 'Hattie', 'Bennie', 'Oliverie', 'Maisy', 'Percie', 'Lottie', 'Reggie', 'Sophie', 'Zachary', 'Cassy', 'Harry', 'Amelie', 'Benny', 'Mary', 'Finley', 'Kimberly', 'Archie', 'Rosalie', 'Tommie', 'Lucy', 'Charlie', 'Cally', 'Gabbie', 'Belly', 'Ashby', 'Emily', 'Rusty', 'Carrie', 'Frankie', 'Maggie', 'Leslie', 'Rudy', 'Sydney', 'Lacie', 'Cody', 'Elizabethie', 'Jeffrie', 'Allie', 'Wesley', 'Kimberley', 'Ty', 'Evie', 'Macky', 'Wendy', 'Eddy', 'Haylie', 'Samsie', 'Ellie', 'Toby', 'Amy', 'Charlie', 'Nancy']
+const names = ['Barnabie', 'Rosie', 'Raffertie', 'Amie', 'Timothie', 'Marcy', 'Zacharie', 'Elsie', 'Billie', 'Lainie', 'Connolly', 'Callie', 'Montie', 'Cassie', 'Archibaldie', 'Emmie', 'Barnie', 'Sadie', 'Mackenzie', 'Goldie', 'Charlottie', 'Robbie', 'Evie', 'Montgomie', 'Stephanie', 'Maxie', 'Hallie', 'Alfie', 'Maisie', 'Ronie', 'Dixie', 'Bernie', 'Trixie', 'Frankie', 'Cassie', 'Bennie', 'Mindie', 'Bobbie', 'Kimmie', 'Freddie', 'Pippie', 'Georgie', 'Mollie', 'Harvie', 'Lexie', 'Louie', 'Sallie', 'Eddie', 'Hattie', 'Bennie', 'Oliverie', 'Maisy', 'Percie', 'Lottie', 'Reggie', 'Sophie', 'Zachary', 'Cassy', 'Harry', 'Amelie', 'Benny', 'Mary', 'Finley', 'Kimberly', 'Archie', 'Rosalie', 'Tommie', 'Lucy', 'Charlie', 'Cally', 'Gabbie', 'Belly', 'Ashby', 'Emily', 'Rusty', 'Carrie', 'Frankie', 'Maggie', 'Leslie', 'Rudy', 'Sydney', 'Lacie', 'Cody', 'Elizabethie', 'Jeffrie', 'Allie', 'Wesley', 'Kimberley', 'Ty', 'Evie', 'Macky', 'Wendy', 'Eddy', 'Haylie', 'Samsie', 'Ellie', 'Toby', 'Amy', 'Charlie', 'Nancy', 'Abbie', 'Billy', 'Carrie', 'Darcie', 'Eddie', 'Freddy', 'Gracie', 'Henry', 'Indie', 'Jackie', 'Katie', 'Lenny', 'Maddie', 'Nicky', 'Ollie', 'Penny', 'Quincy', 'Riley', 'Stevie', 'Tillie', 'Vinny', 'Wesley', 'Xandie', 'Yazzy', 'Zoey', 'Albie', 'Bonnie', 'Charlie', 'Dottie', 'Elsie', 'Freddie', 'Ginny', 'Holly', 'Izzy', 'Jamie', 'Kylie', 'Lucky', 'Marnie', 'Nellie', 'Ozzie', 'Percy', 'Quinnie', 'Rosie', 'Sammie', 'Teddie', 'Vicky', 'Winnie', 'Xenie', 'Yannie', 'Ziggy']
 const nicknames = [
   'Blackbeard',
   'Redbeard',
@@ -80,6 +80,28 @@ const stories = [
   "This pirate is a devout follower of a secret pirate code, adhering to principles of honor and loyalty.",
   "This pirate is a legendary storyteller, captivating audiences with tales of their daring escapades on the high seas.",
   "This pirate is a champion of justice, targeting corrupt officials and redistributing their ill-gotten wealth.",
+  "This pirate has a parrot sidekick that has a better sense of direction than they do.",
+  "This pirate is known for their terrible singing voice, capable of scaring off even the most fearsome sea creatures.",
+  "This pirate has an uncanny ability to find treasure maps hidden inside bottles of rum.",
+  "This pirate is constantly searching for the perfect pirate hat to complete their swashbuckling ensemble.",
+  "This pirate has an irrational fear of water, making their pirating career a bit challenging.",
+  "This pirate has a secret stash of sea shanties that they only sing while taking a bath.",
+  "This pirate insists on bringing their collection of rubber ducks on every plundering expedition.",
+  "This pirate has a lucky peg leg that they believe brings them good fortune in every adventure.",
+  "This pirate has a pet crab named Captain Pinchy, who is surprisingly skilled at tying knots.",
+  "This pirate has a habit of accidentally confusing their sword with their toothbrush in the morning rush.",
+  "This pirate is an expert in the art of burping the alphabet, which always earns them the crew's admiration.",
+  "This pirate is known for their terrible jokes, capable of making even the most hardened sailors roll their eyes.",
+  "This pirate has a soft spot for kitten-shaped booty and cannot resist collecting them during their pillaging.",
+  "This pirate always carries a portable hammock to ensure they're ready for a quick nap whenever the mood strikes.",
+  "This pirate believes that the best way to command respect is by wearing an eyepatch on each eye.",
+  "This pirate has a habit of using their hook hand to poke unsuspecting crew members during conversations.",
+  "This pirate has a talent for assembling a perfectly symmetrical pirate ship, much to the envy of rival captains.",
+  "This pirate insists on telling bedtime stories to their crewmates, regardless of the time of day.",
+  "This pirate is notorious for getting seasick even on the calmest of waters, much to their crew's amusement.",
+  "This pirate is famous for their unique pirate dance moves, known to cause uncontrollable laughter among their crewmates.",
+  "This pirate is always the first to volunteer for dishwashing duty, claiming it helps them find hidden treasure in the kitchen.",
+
 ]
 
 const professions = [
