@@ -1,0 +1,4 @@
+
+const generate = () => {
+  alert('generated')
+}
