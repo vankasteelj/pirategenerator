@@ -35,8 +35,6 @@ body {
 
 #charactersheet {
   padding-top: 20px;
-  width: 50vw;
-  margin-left: 25vw;
 }
 
 #identity #name {
@@ -44,16 +42,22 @@ body {
   font-weight: bold;
 }
 
+#identity ul {
+  padding-top: 10px;
+  list-style: none;
+  padding-left: 10px;
+}
+
 #identity #age,
 #identity #profession,
 #identity #weapon {
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 #life #story {
   padding-top: 20px;
   font-style: italic;
-  font-size: 1.4em;
+  font-size: 1.2em;
 }
 
 #credits {
@@ -75,16 +79,28 @@ body {
   #header h1 {
     font-size: 32px;
   }
+  #charactersheet {
+    width: 90vw;
+    margin-left: 5vw;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
   #header h1 {
     font-size: 48px;
   }
+  #charactersheet {
+    width: 70vw;
+    margin-left: 15vw;
+  }
 }
 
 @media (min-width: 1025px) {
   #header h1 {
     font-size: 64px;
+  }
+  #charactersheet {
+    width: 50vw;
+    margin-left: 25vw;
   }
 }
