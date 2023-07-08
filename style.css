@@ -45,14 +45,12 @@ body {
 }
 
 #identity #age,
-#identity #profession {
-  float: left;
+#identity #profession,
+#identity #weapon {
   font-size: 1.2em;
-  padding-right: 30px;
 }
 
 #life #story {
-  clear: both;
   padding-top: 20px;
   font-style: italic;
   font-size: 1.4em;

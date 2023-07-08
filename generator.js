@@ -50,9 +50,9 @@ const nicknames = [
 ]
 
 const stories = [
-  "This pirate is born on a small coastal village and grows up dreaming of the vast open seas.",
-  "This pirate loses their family to a brutal attack by rival pirates, fueling their thirst for revenge.",
-  "This pirate is a former naval officer who turns to piracy after being betrayed by their own crew.",
+  "This pirate was born on a small coastal village and grows up dreaming of the vast open seas.",
+  "This pirate lost their family to a brutal attack by rival pirates, fueling their thirst for revenge.",
+  "This pirate is a former naval officer who turned to piracy after being betrayed by their own crew.",
   "This pirate is a skilled navigator and uses their expertise to discover hidden treasure troves.",
   "This pirate is notorious for their cunning disguises, often posing as a wealthy merchant to infiltrate enemy ships.",
   "This pirate is known for their unmatched swordsmanship, leaving a trail of defeated foes in their wake.",
@@ -100,9 +100,71 @@ const stories = [
   "This pirate insists on telling bedtime stories to their crewmates, regardless of the time of day.",
   "This pirate is notorious for getting seasick even on the calmest of waters, much to their crew's amusement.",
   "This pirate is famous for their unique pirate dance moves, known to cause uncontrollable laughter among their crewmates.",
-  "This pirate is always the first to volunteer for dishwashing duty, claiming it helps them find hidden treasure in the kitchen.",
-
+  "This pirate is always the first to volunteer for dishwashing duty, claiming it helps them find hidden treasure in the kitchen."
 ]
+
+const reputations = [
+  "They are renowned for their unmatched swordsmanship and have never lost a duel.",
+  "They are feared across the seas for their ruthless tactics and merciless plundering.",
+  "They are known as a skilled navigator, always finding their way even in the most treacherous waters.",
+  "They are celebrated for their strategic brilliance, often outsmarting larger fleets with ease.",
+  "They are notorious for their ability to vanish into thin air, leaving no trace behind.",
+  "They are respected by their crew for their unwavering loyalty and fair treatment.",
+  "They are revered for their unrivaled knowledge of hidden treasure troves and lost pirate havens.",
+  "They are infamous for their audacious heists on heavily guarded merchant ships.",
+  "They are hailed as a legend among pirates, with countless tales of their daring escapes and victories.",
+  "They are whispered about in port towns, known for their uncanny ability to evade capture by authorities.",
+  "They are respected by rival pirates for their strict adherence to a personal code of honor.",
+  "They are admired for their expert command of their ship, guiding it through storms and battles with unmatched skill.",
+  "They are recognized for their acts of kindness towards those in need, earning them a reputation as a pirate with a heart of gold.",
+  "They are feared by superstitious sailors, rumored to be protected by ancient sea spirits.",
+  "They are celebrated for their charismatic leadership, inspiring their crewmates to loyalty and bravery.",
+  "They are infamous for their navigation prowess, always able to find the shortest and safest routes.",
+  "They are known for their uncanny ability to predict the weather, ensuring successful voyages even in the most unpredictable conditions.",
+  "They are respected as a fierce protector of the seas, standing up against those who exploit and harm the ocean.",
+  "They are admired for their skillful negotiations, often striking lucrative deals with merchants and rival pirate crews.",
+  "They are notorious for their affinity with sea creatures, rumored to have a telepathic connection with marine life.",
+  "They are known for their uncanny ability to navigate through treacherous reefs unscathed.",
+  "They are respected by fellow pirates for their unwavering loyalty to their crewmates.",
+  "They are feared for their lightning-fast reflexes and unmatched agility in combat.",
+  "They are celebrated as a master of disguise, capable of infiltrating any ship unnoticed.",
+  "They are notorious for their extensive knowledge of secret pirate hideouts and hidden caches of treasure.",
+  "They are hailed as a legend among pirates, with their name striking fear into the hearts of those who hear it.",
+  "They are whispered about in taverns, known for their uncanny luck in finding lost relics and ancient artifacts.",
+  "They are infamous for their ability to outmaneuver even the most advanced naval vessels.",
+  "They are revered as a protector of the downtrodden, often coming to the aid of those oppressed by tyranny.",
+  "They are respected by their crew for their unmatched culinary skills and ability to turn even the humblest rations into a feast.",
+  "They are celebrated for their proficiency in multiple languages, allowing them to negotiate with a wide range of cultures and nationalities.",
+  "They are known for their unwavering resolve and refusal to back down from any challenge or obstacle.",
+  "They are feared for their uncanny ability to summon storms at will, wreaking havoc on their enemies.",
+  "They are admired for their knowledge of ancient pirate lore and their dedication to upholding traditional pirate values.",
+  "They are infamous for their audacious raids on heavily fortified naval fortresses and coastal settlements.",
+  "They are hailed as a master of the art of intimidation, with a mere glance capable of striking fear into the hearts of even the bravest souls.",
+  "They are respected as a cunning strategist, always able to anticipate their enemies' moves and stay one step ahead.",
+  "They are recognized for their extensive network of informants and spies, providing them with valuable intelligence on potential targets.",
+  "They are known for their unparalleled skill in repairing and maintaining ships, keeping their vessel in peak condition at all times.",
+  "They are feared by their enemies for their mastery of deadly poisons, making them a lethal adversary in close combat.",
+  "They are known for their uncanny ability to find treasure, as long as it's buried under a pile of dirty laundry.",
+  "They are feared across the seas for their fierce swordsmanship and their even fiercer collection of silly hats.",
+  "They are celebrated for their exceptional ability to navigate, especially when it comes to finding the nearest tavern.",
+  "They are notorious for their uncanny knack for making cannonballs disappear, often accidentally, during battles.",
+  "They are hailed as a legend among pirates for their extraordinary talent for talking parrots out of repeating embarrassing secrets.",
+  "They are whispered about in pirate circles for their unparalleled ability to nap on a plank while the ship is in motion.",
+  "They are infamous for their exceptional taste in rum, often finding the rarest and most flavorful barrels in the Caribbean.",
+  "They are revered as a master of disguise, capable of transforming into a barrel of rum at a moment's notice.",
+  "They are respected for their impeccable sense of timing, always showing up just in time to claim someone else's treasure.",
+  "They are celebrated for their unique method of navigation, which involves following the scent of freshly baked cookies.",
+  "They are feared by rival pirates for their uncanny talent of making sea shanties get stuck in their enemies' heads for days.",
+  "They are admired for their unmatched skill in solving crossword puzzles, making them a formidable opponent during long voyages.",
+  "They are known for their uncanny ability to tame sea creatures, often found lounging on a giant inflatable rubber duck.",
+  "They are infamous for their unusual fascination with collecting seashells, to the point of building a seashell palace on their ship.",
+  "They are hailed as the undisputed champion of pirate fashion, always setting trends with their exquisite collection of mismatched socks.",
+  "They are whispered about in port towns for their legendary ability to balance a cutlass on their nose while juggling cannonballs.",
+  "They are respected by their crew for their incredible talent for finding the perfect hiding spot during games of hide-and-seek.",
+  "They are revered as the ultimate prankster, always ready to unleash a swarm of ticklish parrots on unsuspecting rival captains.",
+  "They are celebrated for their unmatched ability to tell pirate jokes that are so bad, they can make an entire ship burst into laughter.",
+  "They are feared by superstitious sailors for their mysterious ability to predict the exact moment when someone's hat will be blown away by the wind."
+];
 
 const professions = [
   'Sailor',
@@ -119,6 +181,39 @@ const professions = [
   'Warrior',
 ]
 
+const weapons = [
+  'Cutlass',
+  'Flintlock pistol',
+  'Boarding axe',
+  'Rapier',
+  'Blunderbuss',
+  'Throwing knives',
+  'Saber',
+  'Harpoon',
+  'Cannon',
+  'Poisoned dagger',
+  'Cat o\' nine tails',
+  'Musket',
+  'Longbow',
+  'Trident',
+  'Belaying pin',
+  'Net launcher',
+  'Sling',
+  'Brass knuckles',
+  'Hidden blade',
+  'Double-barreled pistol',
+  'Grappling hook',
+  'Tomahawk',
+  'Blowgun',
+  'Spiked mace',
+  'Hand crossbow',
+  'Whip',
+  'Bola',
+  'Stink bomb',
+  'Firebrand',
+  'Cursed cutlass',
+]
+
 const getRandomItem = (arr) => {
   const randomIndex = Math.floor(Math.random() * arr.length)
   const item = arr[randomIndex]
@@ -129,10 +224,13 @@ const generate = () => {
   let name = getRandomItem(names)
   let nickname = getRandomItem(nicknames)
   let profession = getRandomItem(professions)
+  let weapon = getRandomItem(weapons)
   let story = getRandomItem(stories)
+  let reputation = getRandomItem(reputations)
   document.getElementById('name').innerText = name + ' "' + nickname + '"'
   document.getElementById('profession').innerText = 'Profession: ' + profession
-  document.getElementById('story').innerText = story
+  document.getElementById('story').innerText = story + ' ' + reputation
+  document.getElementById('weapon').innerText = 'Weapon of choice: ' + weapon
 
   let ageMax = 73;
   let ageMin = 17;
