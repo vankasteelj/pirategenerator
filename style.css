@@ -101,6 +101,7 @@ body {
   border: 1px solid #111;
   border-radius: 15px;
   padding: 5px 10px;
+  margin-bottom: 5px;
   text-align: center;
   box-shadow: 0 0 60px #8a4d0f inset;
   background: #fffef0;

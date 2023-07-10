@@ -164,7 +164,7 @@ const reputations = [
   "They are revered as the ultimate prankster, always ready to unleash a swarm of ticklish parrots on unsuspecting rival captains.",
   "They are celebrated for their unmatched ability to tell pirate jokes that are so bad, they can make an entire ship burst into laughter.",
   "They are feared by superstitious sailors for their mysterious ability to predict the exact moment when someone's hat will be blown away by the wind."
-];
+]
 
 const professions = [
   'Sailor',
@@ -178,7 +178,7 @@ const professions = [
   'Cultist',
   'Mage',
   'Seeker',
-  'Warrior',
+  'Warrior'
 ]
 
 const weapons = [
@@ -211,7 +211,7 @@ const weapons = [
   'Bola',
   'Stink bomb',
   'Firebrand',
-  'Cursed cutlass',
+  'Cursed cutlass'
 ]
 
 const appearances = [
@@ -234,25 +234,26 @@ const appearances = [
   "Their eyepatch is uniquely designed to resemble a pirate's favorite snack: a delicious slice of pizza.",
   "They have an impressive array of tattoos, each telling a different tale, with one that mysteriously changes design every full moon.",
   "Their attire is adorned with buttons salvaged from various adventures, with each button representing a daring escape or a questionable decision.",
-  "They wear a shiny belt buckle engraved with the words 'No booty like pirate booty.'",
+  "They wear a shiny belt buckle engraved with the words 'No booty like pirate booty.'"
 ]
 
 const backdrops = [0, 1, 2, 3, 4]
 
+const pad = (n, l) => n.toString().padStart(getArrLength(l), '0')
+const getArrLength = (arr) => arr.length.toString().split('').length
 const getRandomItem = (arr) => {
   const randomIndex = Math.floor(Math.random() * arr.length)
-  const pad = (n, l) => n.toString().padStart(l.length.toString().split('').length, '0')
   const item = arr[randomIndex]
   return [item, pad(randomIndex, arr)]
 }
-
-
+const getItem = (arr, index) => {
+  index = parseInt(index)
+  const item = arr[index]
+  return [item, pad(index, arr)]
+}
 
 const generate = () => {
-  // reset
-  document.getElementById('charactersheet').className = ''
-
-  // generate
+  // generate an id
   const name = getRandomItem(names)
   const nickname = getRandomItem(nicknames)
   const profession = getRandomItem(professions)
@@ -261,23 +262,80 @@ const generate = () => {
   const reputation = getRandomItem(reputations)
   const appearance = getRandomItem(appearances)
   const backdrop = getRandomItem(backdrops)
-  const ageMax = 73;
-  const ageMin = 17;
+  const ageMax = 73
+  const ageMin = 17
   const age = Math.floor(Math.random() * (ageMax - ageMin + 1) + ageMin)
 
-  // conditions
-  const completeName = ((name[0] + ' "' + nickname[0] + '"').length <= 16) ? name[0] + ' "' + nickname[0] + '"' : name[0] + '\n"' + nickname[0] + '"'
+  const id = [name[1], nickname[1], profession[1], weapon[1], story[1], reputation[1], appearance[1], backdrop[1], age].join('')
+  return id
+}
 
-  // apply
-  document.getElementById('name').innerText = completeName
-  document.getElementById('charactersheet').classList.add('img'+backdrop[0]);
-  document.getElementById('profession').innerText = 'Profession: ' + profession[0]
-  document.getElementById('weapon').innerText = 'Weapon of choice: ' + weapon[0]
-  document.getElementById('story').innerText = story[0] + ' ' + reputation[0]
-  document.getElementById('appearance').innerText = appearance[0]
-  document.getElementById('age').innerText = age + " years old"
+const loadGenerated = () => {
+  const baseUrl = new URL(window.location)
+  window.location = baseUrl.pathname + '?id=' + generate()
+}
 
-  // card number
-  const card = [name[1], nickname[1], profession[1], weapon[1], story[1], reputation[1], appearance[1], backdrop[1], age].join('')
-  document.getElementById('card').innerText = '#' + card
+const loadPage = () => {
+  // reset
+  document.getElementById('charactersheet').className = ''
+
+  // has an ID been passed?
+  const baseUrl = new URL(window.location)
+  const id = baseUrl.searchParams.get('id')
+  if (id) {
+    // get from ID
+    let start = 0
+    let end = 0 + getArrLength(names)
+    const name = getItem(names, id.slice(start, end))
+
+    start = end
+    end = start + getArrLength(nicknames)
+    const nickname = getItem(nicknames, id.slice(start, end))
+
+    start = end
+    end = start + getArrLength(professions)
+    const profession = getItem(professions, id.slice(start, end))
+
+    start = end
+    end = start + getArrLength(weapons)
+    const weapon = getItem(weapons, id.slice(start, end))
+
+    start = end
+    end = start + getArrLength(stories)
+    const story = getItem(stories, id.slice(start, end))
+
+    start = end
+    end = start + getArrLength(reputations)
+    const reputation = getItem(reputations, id.slice(start, end))
+
+    start = end
+    end = start + getArrLength(appearances)
+    const appearance = getItem(appearances, id.slice(start, end))
+
+    start = end
+    end = start + getArrLength(backdrops)
+    const backdrop = getItem(backdrops, id.slice(start, end))
+
+    start = end
+    const age = id.slice(start)
+
+    // conditions
+    const completeName = ((name[0] + ' "' + nickname[0] + '"').length <= 16) ? name[0] + ' "' + nickname[0] + '"' : name[0] + '\n"' + nickname[0] + '"'
+
+    // apply
+    document.getElementById('name').innerText = completeName
+    document.getElementById('charactersheet').classList.add('img' + backdrop[0])
+    document.getElementById('profession').innerText = 'Profession: ' + profession[0]
+    document.getElementById('weapon').innerText = 'Weapon of choice: ' + weapon[0]
+    document.getElementById('story').innerText = story[0] + ' ' + reputation[0]
+    document.getElementById('appearance').innerText = appearance[0]
+    document.getElementById('age').innerText = age + " years old"
+
+    // card number
+    const card = [name[1], nickname[1], profession[1], weapon[1], story[1], reputation[1], appearance[1], backdrop[1], age].join('')
+    document.getElementById('card').innerText = '#' + card
+  } else {
+    // load a generated url
+    window.location = baseUrl.pathname + '?id=' + generate()
+  }
 }
