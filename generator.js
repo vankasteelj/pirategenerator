@@ -241,9 +241,12 @@ const backdrops = [0, 1, 2, 3, 4]
 
 const getRandomItem = (arr) => {
   const randomIndex = Math.floor(Math.random() * arr.length)
+  const pad = (n, l) => n.toString().padStart(l.length.toString().split('').length, '0')
   const item = arr[randomIndex]
-  return item
+  return [item, pad(randomIndex, arr)]
 }
+
+
 
 const generate = () => {
   // reset
@@ -263,14 +266,18 @@ const generate = () => {
   const age = Math.floor(Math.random() * (ageMax - ageMin + 1) + ageMin)
 
   // conditions
-  const completeName = ((name + ' "' + nickname + '"').length <= 16) ? name + ' "' + nickname + '"' : name + '\n"' + nickname + '"'
+  const completeName = ((name[0] + ' "' + nickname[0] + '"').length <= 16) ? name[0] + ' "' + nickname[0] + '"' : name[0] + '\n"' + nickname[0] + '"'
 
   // apply
-  document.getElementById('charactersheet').classList.add('img'+backdrop);
   document.getElementById('name').innerText = completeName
-  document.getElementById('profession').innerText = 'Profession: ' + profession
-  document.getElementById('weapon').innerText = 'Weapon of choice: ' + weapon
-  document.getElementById('story').innerText = story + ' ' + reputation
-  document.getElementById('appearance').innerText = appearance
+  document.getElementById('charactersheet').classList.add('img'+backdrop[0]);
+  document.getElementById('profession').innerText = 'Profession: ' + profession[0]
+  document.getElementById('weapon').innerText = 'Weapon of choice: ' + weapon[0]
+  document.getElementById('story').innerText = story[0] + ' ' + reputation[0]
+  document.getElementById('appearance').innerText = appearance[0]
   document.getElementById('age').innerText = age + " years old"
+
+  // card number
+  const card = [name[1], nickname[1], profession[1], weapon[1], story[1], reputation[1], appearance[1], backdrop[1], age].join('')
+  document.getElementById('card').innerText = '#' + card
 }
