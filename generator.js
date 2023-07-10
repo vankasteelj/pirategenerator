@@ -40,7 +40,7 @@ const nicknames = [
   'Sharkbait',
   'Cutlass',
   'Seadog Slim',
-  'the Treasure Hunter',
+  'Treasure Hunter',
   'Rusty Blade',
   'Deckhand',
   'Marauding',
@@ -237,6 +237,8 @@ const appearances = [
   "They wear a shiny belt buckle engraved with the words 'No booty like pirate booty.'",
 ]
 
+const backdrops = [0, 1, 2, 3, 4]
+
 const getRandomItem = (arr) => {
   const randomIndex = Math.floor(Math.random() * arr.length)
   const item = arr[randomIndex]
@@ -244,21 +246,31 @@ const getRandomItem = (arr) => {
 }
 
 const generate = () => {
-  let name = getRandomItem(names)
-  let nickname = getRandomItem(nicknames)
-  let profession = getRandomItem(professions)
-  let weapon = getRandomItem(weapons)
-  let story = getRandomItem(stories)
-  let reputation = getRandomItem(reputations)
-  let appearance = getRandomItem(appearances)
-  document.getElementById('name').innerText = name + ' "' + nickname + '"'
+  // reset
+  document.getElementById('charactersheet').className = ''
+
+  // generate
+  const name = getRandomItem(names)
+  const nickname = getRandomItem(nicknames)
+  const profession = getRandomItem(professions)
+  const weapon = getRandomItem(weapons)
+  const story = getRandomItem(stories)
+  const reputation = getRandomItem(reputations)
+  const appearance = getRandomItem(appearances)
+  const backdrop = getRandomItem(backdrops)
+  const ageMax = 73;
+  const ageMin = 17;
+  const age = Math.floor(Math.random() * (ageMax - ageMin + 1) + ageMin)
+
+  // conditions
+  const completeName = ((name + ' "' + nickname + '"').length <= 16) ? name + ' "' + nickname + '"' : name + '\n"' + nickname + '"'
+
+  // apply
+  document.getElementById('charactersheet').classList.add('img'+backdrop);
+  document.getElementById('name').innerText = completeName
   document.getElementById('profession').innerText = 'Profession: ' + profession
   document.getElementById('weapon').innerText = 'Weapon of choice: ' + weapon
   document.getElementById('story').innerText = story + ' ' + reputation
   document.getElementById('appearance').innerText = appearance
-
-  let ageMax = 73;
-  let ageMin = 17;
-  let age = Math.floor(Math.random() * (ageMax - ageMin + 1) + ageMin)
   document.getElementById('age').innerText = age + " years old"
 }
